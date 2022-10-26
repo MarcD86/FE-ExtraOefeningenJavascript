@@ -8,7 +8,14 @@
 // 0 geeft false
 // 300 geeft true
 
+function getNumber(number) {
 
+    if(number > 0) {
+        return true;
+    }
+    else return false;
+}
+console.log(getNumber(44))
 
 /* Opdracht 2 */
 // Schrijf een functie die twee getallen verwacht en teruggeeft of ze, opgetelt, gróter zijn dan 100.
@@ -17,7 +24,14 @@
 // 8 en 92 geeft false
 // 89 en 14 geeft true
 
+function getNumbers(number1, number2) {
+    if(number1 + number2 > 100){
+        return true;
+    }
+    else return false;
+}
 
+console.log(getNumbers(92, 8))
 
 /* Opdracht 3 */
 // Schrijf een functie die een zin verwacht en de eerste letter uit de zin omzet naar een hoofdletter.
@@ -25,7 +39,11 @@
 // "de kat krabt de krullen van de trap" geeft "De kat krabt de krullen van de trap"
 // "programmeren is super leuk!" geeft "Programmeren is super leuk!"
 
-
+function firstLetter(sentence) {
+    const a = sentence.substring(0, 1).toUpperCase() + sentence.substring(1,sentence.length)
+    console.log(a);
+}
+firstLetter("de kat krabt de krullen van de trap")
 
 /* Opdracht 4 */
 // Schrijf een functie die een argument verwacht en het datatype teruggeeft (boolean, object, undefined, number, string,function)
@@ -35,7 +53,10 @@
 // "Hallo" geeft string
 // [1, 2, 3] geeft object (ja echt!)
 
-
+function typeOff(dataType) {
+    console.log(typeof dataType)
+}
+typeOff(true)
 
 /* Opdracht 5 */
 // Schrijf een functie die een array van strings verwacht. Hoe lang die array is weet je niet van tevoren - het zouden zomaar 100 entries kunnen zijn.
